@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "picsimsearch"
+version = "0.1.0"
+description = "A search code capable of searching and retrieving similar images in a dataset"
+authors = ["Mahsa Sanaei <mahsasanaei.n@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+
+python = "^3.10"
+numpy = ="^1.25"
+opencv-python = "^4.8"
+pickle-mixin = "^1.0 "
+Pillow = "^10.0"
+os = "*"
+glob2 = "^0.7"
+matplotlib = "^3.7"
+gradio = "^3.40"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
