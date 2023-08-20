@@ -5,7 +5,7 @@ from .Io import *
 from .similarity import compute_similarity
 from .prepare import prepare_image
 
-def set_engine(num_keypoints, dataset_path):
+def set_engine(num_keypoints, dataset_path, query_image):
     """
     num_keypoints: is the number of key sets used for feature extraction and matching.
       You can change this number according to your needs. Note that increasing this number may lead to 
@@ -13,22 +13,22 @@ def set_engine(num_keypoints, dataset_path):
     """
     orb = cv2.ORB_create(num_keypoints)
     keypoint_dataset = {}
-
+    descriptor_query = extract_features(query_image , orb)
     if os.path.exists(FEAT_PATH):
         keypoint_dataset = load_features()
     else:
         creat_features_dataset(dataset_path, orb)
         keypoint_dataset = load_features()
-    return keypoint_dataset
+    return keypoint_dataset, descriptor_query
 
 
 
 def search(query, num_keypoints, dataset_path):
     print('initialize engine ...')
-    keypoint_dataset = set_engine(num_keypoints, dataset_path)
-    print("Search ...")
     query_image = prepare_image(query)
-    descriptor_query = extract_features(query_image)
+    keypoint_dataset , descriptor_query = set_engine(num_keypoints, dataset_path, query_image)
+    print("Searching ...")
+
     #operator
     matcher = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
 
@@ -44,6 +44,7 @@ def search(query, num_keypoints, dataset_path):
     if similarities:
         result = next(iter(similarities))[0]
         print(result.split('/')[-2])
-        Io.show.result(result, query)
+        show.result(result, query)
+        # print(result)
     else:
       print("No similar images found.")
