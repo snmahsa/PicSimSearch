@@ -6,7 +6,7 @@ def result(result, query):
     fig, axes = plt.subplots(1, 2, figsize=(10, 5))
     
     # تصویر اول
-    axes[0].imshow(query)
+    axes[0].imshow(cv2.cvtColor(query, cv2.COLOR_BGR2RGB))
     axes[0].axis('off')
     axes[0].set_title('query')
     
