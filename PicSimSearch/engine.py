@@ -43,7 +43,7 @@ def search(query, num_keypoints, dataset_path):
     similarities = sorted(similarities.items(), key=lambda x: x[1], reverse=True)
     if similarities:
         result = next(iter(similarities))[0]
-        print(result.split('/')[-2])
+        print("Folder : "result.split('/')[-2])
         show.result(result, query)
         # print(result)
     else:
