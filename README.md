@@ -27,6 +27,10 @@ PicSimSearch can be installed using poetry:
     ```shell
     poetry install
     ```
+4. Install    
+    ```shell
+   poetry add PicSimSearch
+        ```
 ## Usage
 ```python
 from PicSimSearch import Io
