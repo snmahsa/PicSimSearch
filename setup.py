@@ -11,5 +11,6 @@ setup(
     description=' Python package for image search based on keypoint-based feature extraction and matching ',
     author='Mahsa Sanaei',
     author_email='mahsasanaei.n@gmail.com',
+    url = 'https://github.com/snmahsa/PicSimSearch',
     packages=['PicSimSearch']
     )
