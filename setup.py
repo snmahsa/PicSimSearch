@@ -12,5 +12,6 @@ setup(
     author='Mahsa Sanaei',
     author_email='mahsasanaei.n@gmail.com',
     url = 'https://github.com/snmahsa/PicSimSearch',
-    packages=['PicSimSearch']
+    license='MIT',
+
     )
