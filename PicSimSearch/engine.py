@@ -4,7 +4,7 @@ from .feature import *
 from .Io import *
 from .similarity import compute_similarity
 from .prepare import prepare_image
-
+from .utils import creat_features_dataset_path
 def set_engine(num_keypoints, dataset_path, query_image):
     """
     num_keypoints: is the number of key sets used for feature extraction and matching.
@@ -14,11 +14,12 @@ def set_engine(num_keypoints, dataset_path, query_image):
     orb = cv2.ORB_create(num_keypoints)
     keypoint_dataset = {}
     descriptor_query = extract_features(query_image , orb)
+    FEAT_PATH = creat_features_dataset_path(dataset_path)
     if os.path.exists(FEAT_PATH):
-        keypoint_dataset = load_features()
+        keypoint_dataset = load_features(FEAT_PATH)
     else:
-        creat_features_dataset(dataset_path, orb)
-        keypoint_dataset = load_features()
+        creat_features_dataset(dataset_path, orb, FEAT_PATH)
+        keypoint_dataset = load_features(FEAT_PATH)
     return keypoint_dataset, descriptor_query
 
 
