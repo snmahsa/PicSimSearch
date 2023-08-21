@@ -1,5 +1,5 @@
 from ..dependencies import *
-
+from ..variables import DEFAULT_FOLDER_PATH
 
 def read_image(path, mode = -1):
     """
@@ -11,12 +11,11 @@ def read_image(path, mode = -1):
 
 
 def read_image_from_folder():
-    default_folder_path = 'PicSimSearch/Images/'
     #Hide tk window
     root = tk.Tk()
     root.withdraw()
     #Get image path
-    file_path = filedialog.askopenfilename(initialdir=default_folder_path)
+    file_path = filedialog.askopenfilename(initialdir=DEFAULT_FOLDER_PATH)
     #read image
     if len(file_path) != 0 :
         image = cv2.imread(file_path)
