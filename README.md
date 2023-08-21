@@ -58,35 +58,65 @@ num_keypoints = 3000
 engine.search(image, num_keypoints, dataset_path)
 ```
 initialize engine ...
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 extract_features
+
 ...
+
 [INFO] Serializing Features...
+
 [INFO] Loading Features...
+
 Searching ...
+
 Folder : O
+
 
 ![Sample Image](https://github.com/snmahsa/myrep/blob/main/result.png)
 
