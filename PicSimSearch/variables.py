@@ -11,4 +11,8 @@ FEAT_FOLDER_PATH = folder_path
 ##########################
 
 #creat Image folder path
-DEFAULT_FOLDER_PATH  = os.path.join(project_dir, '/Images/')
+DEFAULT_FOLDER_PATH  = os.path.join(project_dir, 'Images/')
+is_exist = os.path.exists(DEFAULT_FOLDER_PATH)
+if not is_exist:
+    os.mkdir(DEFAULT_FOLDER_PATH)  
+
