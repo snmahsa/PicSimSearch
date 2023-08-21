@@ -126,3 +126,7 @@ Contributions to PicSimSearch are welcome! If you find any issues or have sugges
 License
 
 This project is licensed under the MIT License. See the LICENSE file for more information.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more information.
