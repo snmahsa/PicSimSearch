@@ -5,7 +5,7 @@ with open('requirements.txt') as f:
 
 setup(
     name='PicSimSearch',
-    version='0.1.1',
+    version='0.1.2',
     packages=find_packages(),
     install_requires=requirements,
     description=' Python package for image search based on keypoint-based feature extraction and matching ',
@@ -13,5 +13,5 @@ setup(
     author_email='mahsasanaei.n@gmail.com',
     url = 'https://github.com/snmahsa/PicSimSearch',
     license='MIT',
-
+    keywords=["python3", "clasification", "find picture"],
     )

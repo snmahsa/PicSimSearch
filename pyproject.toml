@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "picsimsearch"
-version = "0.1.1"
+version = "0.1.2"
 description = "A search code capable of searching and retrieving similar images in a dataset"
 authors = ["Mahsa Sanaei <mahsasanaei.n@gmail.com>"]
 license = "MIT"
