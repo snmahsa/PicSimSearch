@@ -39,10 +39,14 @@ from PicSimSearch import dataset
 ```python
 Io.upload.upload_image_of_local()
 ```
+![Sample Image](https://github.com/snmahsa/myrep/blob/main/upload_image_of_local1.png)
+![Sample Image](https://github.com/snmahsa/myrep/blob/main/upload_image_of_local2.png)
 
 ```python
 image = Io.read.read_image_from_folder()
 ```
+![Sample Image](https://github.com/snmahsa/myrep/blob/main/read_image_from_folder2.png)
+
 ![Sample Image](https://github.com/snmahsa/myrep/blob/main/hvij.png)
 
 ```python
@@ -53,6 +57,7 @@ Io.show.imshow(image)
 dataset_path = dataset.set_dataset_path()
 num_keypoints = 3000
 ```
+![Sample Image](https://github.com/snmahsa/myrep/blob/main/set_dataset_path.png)
 
 ```python
 engine.search(image, num_keypoints, dataset_path)
