@@ -59,7 +59,7 @@ multidict==6.0.4
 nest-asyncio==1.5.6
 networkx==3.1
 numpy==1.25.2
-opencv-python==4.8.0.76
+opencv-python==4.8.1.78
 orjson==3.9.5
 packaging==23.1
 pandas==2.0.3
